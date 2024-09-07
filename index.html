@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Management Application</title>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+        crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css">
+</head>
+<!-- <body style="background-color: darkgray;"> -->
+
+    <!-- notification container -->
+    <div id="notification" class="alert d-none" role="alert">
+
+    </div>
+
+    <!-- buttons -->
+    <div class="my-5 w-75 mx-auto">
+
+        <div class="d-flex justify-content-between my-5 ">
+        <button
+            type="button"
+            class="btn btn-secondary"
+            
+            >
+            <a style="color: azure; text-decoration: none;"
+             class="" href="/index.html">
+                Home
+            </a>
+        </button>
+        <button
+            type="button"
+            class="btn btn-primary"
+            onclick="displayCustomers()"
+            >
+            Customers List
+        </button>
+        
+        <button
+        type="button"
+        class="btn btn-success"
+        onclick="displayForm('new-form')"
+        >
+        Register
+        </button>
+    </div>
+
+    <div id="image" class=" my-5 mx-auto text-center">
+        <h3>Customer Management Application</h3>
+        <img  class="w-50" src="https://cdn.pixabay.com/photo/2024/02/28/15/47/call-8602325_1280.png" alt="customer service image">
+    </div>
+
+</div>
+
+   <!-- customer table -->
+    <section id="customer-table" class="mx-auto my-3 w-75" style="display: none;">
+        <h1>Customer List</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Company</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="customer-list">
+
+                <!-- Customer rows will be dynamically added here -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- customer register form -->
+    <section id="new-form" class="mx-auto my-3 w-75" style="display: none;">
+        <h1>Insert Customer Info</h1>
+        <form id="insert-customer-form" style="zoom: 150%">
+            <label for="name">Name:</label><br />
+            <input type="text" name="name" /><br /><br />
+    
+            <label for="address">Address:</label><br />
+            <input type="text" name="address" /><br /><br />
+    
+            <label for="company">Company:</label><br />
+            <input type="text" name="company" /><br /><br />
+    
+            <button type="submit" class="btn btn-dark">Submit Info</button>
+        </form>
+    </section>
+    
+    <!-- customer edit form -->
+    <section id="edit-form" class="mx-auto my-3 w-75" style="display: none;">
+        <h1>Edit Customer Info</h1>
+        <form id="edit-form" style="zoom: 150%">
+            <input type="hidden" name="id" />
+
+            <label for="editName">Name:</label><br />            
+            <input type="text" name="editName" /><br /><br />
+
+            <label for="editAdress">Adress:</label><br />
+            <input type="text" name="editAdress" /><br /><br />
+            
+            <label for="editCompany">Company:</label><br />
+            <input type="text" name="editCompany" /><br /><br />
+    
+            <button type="submit" class="btn btn-dark">Update</button>
+        </form>
+    </section>
+    
+    <script src="./js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
